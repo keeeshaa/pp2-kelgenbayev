@@ -1,20 +1,14 @@
 def spy_game(nums):
-    li = [0,0,7]
-    for x in nums:
-        if(nums[x] == li[0]):
-            for j in range(x,len(nums)):
-                if(nums[j] == li[1]):
-                    for s in range(j,len(nums)):
-                        if(nums[s] == li[2]):
-                            return True
-                            
-                
+    sequence = [0, 0, 7]
+    for num in nums:
+        if num == sequence[0]:
+            sequence.pop(0)
+            if not sequence:
+                return True
+    return False
 
-nums = input("Enter numbers: ")
-nums = list(map(int,nums.split()))
-if(spy_game(nums)):
-    print("Pass")
-else:
-    print("Fail")
+examp = input()
+alist = [int(num) for num in examp.split()]
 
-#NOT SOLVED!!!!!!!!!!!!!!!!
+result = spy_game(alist)
+print(result)
