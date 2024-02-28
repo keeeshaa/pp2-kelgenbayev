@@ -1,24 +1,15 @@
 import re
-def reg(s):
-    patt = r'[A-Z]'
-    ans = ''
-    for i in range(len(s)):
-        if re.match(patt , s[i]):
-            ans += " " + s[i]
-        else:
-            ans += s[i]
-    arr = ans.split()
-    pattern = r'[A-Z]'
-    new_arr = []
-    for word in arr:
-        new_str = ''
-        for i in range(len(word)):
-            if re.match(pattern , word[i]):
-                new_str += word[i].lower()
-            else:
-                new_str += word[i]
-        new_arr.append(new_str)
-    result = "_".join(new_arr)
-    print(result)
-s = str(input())
-reg(s)
+
+txt = input()
+new_txt = ""
+li =list()
+for i in range(len(txt)):
+    if re.match(r'[A-Z]', txt[i]):
+        new_txt += " "
+    new_txt += txt[i]
+new_txt = re.split(r"[ ]", new_txt)
+for i in new_txt:
+    text = i.lower()
+    li.append(text)
+new_txt = "_".join(li)
+print(new_txt)
