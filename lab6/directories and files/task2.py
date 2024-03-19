@@ -9,12 +9,11 @@ def check(path):
 
     return status
 
-if __name__ == "__main__":
-    path = input("Enter the path to check access: ")
+path = input("Enter the path to check access: ")
 
-    access = check(path)
+access = check(path)
 
-    print("Existence:", access['exist'])
-    print("Readability:", access['read'])
-    print("Writability:", access['write'])
-    print("Executability:", access['execute'])
+print("Existence:", access['exist'])
+print("Readability:", access['read'])
+print("Writability:", access['write'])
+print("Executability:", access['execute'])

@@ -1,6 +1,6 @@
 import json
 
-file_path = r'C:\Users\Admin\Desktop\pp2\lab4\json\sample-data.json'
+file_path = r'C:\\Users\\Admin\\Desktop\\pp2\\lab4\\json\\sample-data.json'
 with open(file_path, 'r') as file:
     data = json.load(file)
 
